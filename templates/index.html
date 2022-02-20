@@ -1,125 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-{% load static %}
+  {% load static %}
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.88.1" />
     <title>M.Shadanfar</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
-
-
-    
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.1/examples/album/"
+    />
+    <link href="{% static 'css/modal.css' %}"  rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
-<link href="{% static 'css/bootstrap.min.css' %}"  rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+      .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 33.333333333333333333%;
+  max-width: 33.333333333333333333%;
+  padding: 0 7px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+      body {
+        background-color: #f1f1f1;
+      }
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
         }
-      }
-        .parallax {
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+          .parallax {
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;}
     </style>
-
-    
   </head>
-  <body style="background-color:#F1F1F1;">
+  <body>
+    <header>
+      <div
+        class="view parallax"
+        data-jarallax='{"speed":0.4}'
+        style="
+          background-image: url('static/images/background1.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          min-height: 1000px;
+        "
+      >
+        <div>{% include "navbar.html" %}</div>
 
-<header>
-
-  <div class="view parallax" data-jarallax='{"speed":0.4}'
-    style="
-     background-image: url('static/images/background2.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center center;
-    min-height:1000px;">
-  <div>
-    {% include "navbar.html" %}
-    </div>
-
-    <div class="mask rgba-black-strong">
-
-      <div class="container h-100 d-flex justify-content-center align-items-center">
-        <div class="row smooth-scroll">
-          <div class="col-md-12">
-            <div class="white-text text-center">
-              <h3 style="color:#d9d9d9;" class="display-5 wow fadeIn" data-wow-delay="0.5s">Photographer</h3>
+        <div class="mask rgba-black-strong">
+          <div
+            class="container h-100 d-flex justify-content-center align-items-center"
+          >
+            <div class="row smooth-scroll">
+              <div class="col-md-12">
+                <div class="white-text text-center">
+      
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
 
-<main>
-
-  <div class="view parallax" data-jarallax='{"speed":0.2}'
-    style="background-image: url('static/images/background1.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position: center center;
-    min-height:500px;">
-    <div class="mask rgba-black-strong">
-      <div class="container h-100 d-flex justify-content-center align-items-center">
-        <div class="row smooth-scroll">
-          <div class="col-md-12">
-            <div class="white-text text-center">
-              <h3 style="color:white" class="display-5 wow fadeIn" data-wow-delay="0.5s">Catch the moment</h3>
-              <a class="text-warning" href="#">Order our service </a>
+    <main>
+      <div
+        class="view parallax"
+        data-jarallax='{"speed":0.2}'
+        style="
+          background-image: url('static/images/background3.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          min-height: 500px;
+        "
+      >
+        <div class="mask rgba-black-strong">
+          <div
+            class="container h-100 d-flex justify-content-center align-items-center"
+          >
+            <div class="row smooth-scroll">
+              <div class="col-md-12">
+                <div class="white-text text-center">
+                  <h3
+                    style="color: white"
+                    class="display-5 wow fadeIn"
+                    data-wow-delay="0.5s"
+                  >
+                    Catch the moment
+                  </h3>
+                  <a class="text-warning" href="#">Order our service </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
+      <h1 class="display-1 pb-5 pt-5 text-center">MY WORK</h1>
+       
+      <div class="row">
+        <div class="column">
+          {% for landing in landings %}
+          <img src="{{ landing.image.url }}">
+          {% endfor %}
+  
+        </div>
+        <div class="column">
+          
+          {% for landing1 in landings1 %}
+          <img src="{{ landing1.image.url }}">
+          {% endfor %}
+
+        </div>
+        <div class="column">
+          {% for landing2 in landings2 %}
+          <img src="{{ landing2.image.url }}">
+          {% endfor %}
+        </div>
+
+      </div>
 
 
+    </main>
 
-  <h1 class="display-1 pb-5 pt-5 text-center"> MY WORK</h1>
-
-<div class="row row-cols-1 row-cols-md-3 g-4 pb-5 mx-auto">
-  {% for landing in landings %}
-    <div  class="col">
-        <img src="{{ landing.image.url }}" class="rounded" alt="{landing.alt}"
-             style="min-height:300px;
-            max-height:300px;
-            min-width:500px;
-            max-width:500px;">
-    </div>
-  {% endfor %}
-
-  </div>
-
-
-</main>
-
-<footer>
-{% include "footer.html" %}
-</footer>
+    <footer>{% include "footer.html" %}</footer>
 
 
     <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
-      
-  </body>
 
+  </body>
 </html>
