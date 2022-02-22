@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+<link href="{% static 'css/bootstrap.min.css' %}"  rel="stylesheet">
+<link href="{% static 'css/modal.css' %}"  rel="stylesheet">
+    {% include "navbardark.html" %}
+  </head>
+<body style="background-color:#F1F1F1;">
+<main>
+<h1 class="display-1 pb-5 pt-5 text-center"> Nature Photography</h1>
+<div class="container">
+    <div class="row d-flex flex-wrap align-items-center">
+         {% for nature in natures %}
+        <div class="col-12 col-md-6 col-lg-4">
+ 
+         <img class="rounded" id="myImg" src="{{ nature.image.url }}" alt="1">
+     
+
+</div>
+    {% endfor %}
+</div>
+
+        </div>
+</main>
+<footer>
+{% include "footer.html" %}
+</footer>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/modal.js' %} "></script>
+</body>

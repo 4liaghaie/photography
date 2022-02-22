@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Landing, Landing1, Landing2
 from .models import Fashion
+from .models import Nature
+
 
 def home(request):
     landings = Landing.objects.all()
@@ -12,3 +14,14 @@ def home(request):
 def fashion(request):
     fashions = Fashion.objects.all()
     return render(request, "Fashion.html", {"fashions": fashions})
+
+
+def nature(request):
+    natures = Nature.objects.all()
+    return render(request, "nature.html", {"natures": natures})
+
+
+def about(request):
+    return render(request, "about.html")
+
+
